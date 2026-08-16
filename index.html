@@ -144,28 +144,98 @@ footer{background:#0d1523;color:#c7cdd6;text-align:center;padding:30px 15px;font
 
 <footer>© 2026 Skill With Tushar • Learn Skills • Take Action • Grow</footer>
 
-<script>
-document.getElementById("leadForm").addEventListener("submit",function(e){
-e.preventDefault();
-const name=document.getElementById("name").value.trim();
-const phone=document.getElementById("phone").value.trim();
-const skill=document.getElementById("skill").value;
-if(!/^[0-9]{10}$/.test(phone)){alert("Please enter a valid 10-digit mobile number.");return;}
-const now=new Date();
-const date=now.toLocaleDateString("en-IN",{day:"2-digit",month:"2-digit",year:"numeric"});
-const time=now.toLocaleTimeString("en-IN",{hour:"2-digit",minute:"2-digit"});
-const message=`🔔 NEW LEAD - SKILL WITH TUSHAR
+  <script>
+document.getElementById("leadForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const name = document.getElementById("name").value.trim();
+  const phone = document.getElementById("phone").value.trim();
+  const skill = document.getElementById("skill").value;
+
+  // Mobile number validation
+  if (!/^[0-9]{10}$/.test(phone)) {
+    alert("Please enter a valid 10-digit mobile number.");
+    return;
+  }
+
+  // Get URL tracking parameters
+  const params = new URLSearchParams(window.location.search);
+
+  let source = params.get("utm_source");
+  const medium = params.get("utm_medium") || "";
+  const campaign = params.get("utm_campaign") || "";
+
+  // If no UTM source, check referrer
+  if (!source) {
+    const referrer = document.referrer.toLowerCase();
+
+    if (referrer.includes("instagram")) {
+      source = "Instagram";
+    } else if (referrer.includes("facebook")) {
+      source = "Facebook";
+    } else if (referrer.includes("youtube")) {
+      source = "YouTube";
+    } else if (referrer.includes("google")) {
+      source = "Google";
+    } else if (referrer.includes("whatsapp")) {
+      source = "WhatsApp";
+    } else if (referrer) {
+      source = "Referral";
+    } else {
+      source = "Direct / Website";
+    }
+  }
+
+  // Make source look professional
+  source = source.charAt(0).toUpperCase() + source.slice(1);
+
+  const now = new Date();
+
+  const date = now.toLocaleDateString("en-IN", {
+    day: "2-digit",
+    month: "2-digit",
+    year: "numeric"
+  });
+
+  const time = now.toLocaleTimeString("en-IN", {
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: true
+  });
+
+  // WhatsApp message
+  let message =
+`🔔 NEW LEAD - SKILL WITH TUSHAR
 
 👤 Name: ${name}
 📱 Mobile: ${phone}
 🎯 Interested Skill: ${skill}
 📅 Date: ${date}
 ⏰ Time: ${time}
-🌐 Source: Website
+🌐 Source: ${source}`;
+
+  if (medium) {
+    message += `\n📌 Medium: ${medium}`;
+  }
+
+  if (campaign) {
+    message += `\n🎯 Campaign: ${campaign}`;
+  }
+
+  message += `
 
 Please follow up with this lead.`;
-window.location.href="https://wa.me/919049076348?text="+encodeURIComponent(message);
+
+  // Your WhatsApp number
+  const whatsappURL =
+    "https://wa.me/919049076348?" +
+    "text=" + encodeURIComponent(message);
+
+  // Open WhatsApp
+  window.location.href = whatsappURL;
 });
-</script>
+  </script>
+
+
 </body>
 </html>
