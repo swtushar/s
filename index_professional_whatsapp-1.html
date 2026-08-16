@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Skill With Tushar - Learn digital skills and explore online opportunities.">
+<title>Skill With Tushar | Learn. Build. Grow.</title>
+<style>
+:root{--navy:#101827;--gold:#c9a45c;--cream:#f7f4ee;--white:#fff;--muted:#687181;--line:#e7e1d6}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Georgia,"Times New Roman",serif;background:var(--cream);color:var(--navy);line-height:1.65}
+a{text-decoration:none;color:inherit}
+.container{width:min(1120px,92%);margin:auto}
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.97);border-bottom:1px solid var(--line);backdrop-filter:blur(10px)}
+.nav{height:74px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:22px;font-weight:700;letter-spacing:.3px}.logo span{color:var(--gold)}
+nav{display:flex;gap:28px;font-family:Arial,sans-serif;font-size:14px;font-weight:600}
+nav a:hover{color:var(--gold)}
+.hero{background:linear-gradient(135deg,#0d1523,#182338);color:#fff;padding:105px 0 95px}
+.hero-inner{display:grid;grid-template-columns:1.3fr .7fr;gap:60px;align-items:center}
+.kicker{font-family:Arial,sans-serif;text-transform:uppercase;letter-spacing:3px;color:#d9bc80;font-size:12px;font-weight:700;margin-bottom:18px}
+h1{font-size:clamp(42px,6vw,72px);line-height:1.08;font-weight:700;margin-bottom:22px}
+.hero p{font-family:Arial,sans-serif;color:#d9dee7;max-width:650px;font-size:17px;margin-bottom:30px}
+.btn{display:inline-block;padding:14px 24px;border-radius:4px;background:var(--gold);color:#111827;font-family:Arial,sans-serif;font-weight:800;border:1px solid var(--gold);cursor:pointer}
+.btn.alt{background:transparent;color:#fff;border-color:#6e7786;margin-left:10px}
+.btn:hover{opacity:.9}
+.hero-card{border:1px solid rgba(255,255,255,.18);padding:30px;background:rgba(255,255,255,.05)}
+.hero-card .quote{font-size:27px;line-height:1.35}
+.hero-card small{display:block;color:#b9c0ca;font-family:Arial,sans-serif;margin-top:18px}
+section{padding:82px 0}
+.section-head{text-align:center;max-width:720px;margin:0 auto 42px}
+.eyebrow{font-family:Arial,sans-serif;color:var(--gold);font-weight:800;font-size:12px;letter-spacing:2px;text-transform:uppercase}
+h2{font-size:38px;line-height:1.2;margin:8px 0 12px}
+.section-head p,.muted{font-family:Arial,sans-serif;color:var(--muted)}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.panel{background:#fff;border:1px solid var(--line);padding:34px;border-radius:8px}
+.panel h3{font-size:24px;margin-bottom:10px}
+.panel p{font-family:Arial,sans-serif;color:#5f6876}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:#fff;border:1px solid var(--line);padding:28px;border-radius:8px;transition:.2s}
+.card:hover{transform:translateY(-4px);box-shadow:0 15px 35px rgba(16,24,39,.08)}
+.icon{font-family:Arial,sans-serif;font-size:25px;margin-bottom:15px}
+.card h3{font-size:21px;margin-bottom:8px}.card p{font-family:Arial,sans-serif;color:var(--muted);font-size:14px}
+.form-wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:28px;align-items:stretch}
+.form-info{background:var(--navy);color:#fff;padding:38px;border-radius:8px}
+.form-info h3{font-size:30px;margin-bottom:14px}.form-info p{font-family:Arial,sans-serif;color:#d5dae2}
+.form-info ul{list-style:none;margin-top:24px;font-family:Arial,sans-serif}.form-info li{margin:13px 0}
+.form{background:#fff;border:1px solid var(--line);padding:32px;border-radius:8px}
+label{display:block;font-family:Arial,sans-serif;font-size:13px;font-weight:700;margin:0 0 6px}
+input,select{width:100%;padding:13px 14px;border:1px solid #d9dce2;border-radius:5px;margin-bottom:17px;font-family:Arial,sans-serif;font-size:15px;outline:none}
+input:focus,select:focus{border-color:var(--gold)}
+.form .btn{width:100%;border:0;font-size:15px}
+.note{font-family:Arial,sans-serif;color:#7b8491;font-size:12px;margin-top:12px;text-align:center}
+.cta{background:#ece5d7;text-align:center;padding:65px 20px}
+footer{background:#0d1523;color:#c7cdd6;text-align:center;padding:30px 15px;font-family:Arial,sans-serif;font-size:13px}
+@media(max-width:800px){nav{display:none}.hero{padding:75px 0}.hero-inner,.about,.form-wrap{grid-template-columns:1fr}.cards{grid-template-columns:1fr}section{padding:62px 0}h2{font-size:31px}.btn.alt{margin-left:0;margin-top:10px}}
+</style>
+</head>
+<body>
+
+<header>
+<div class="container nav">
+<a class="logo" href="#home">Skill <span>With Tushar</span></a>
+<nav>
+<a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#contact">Connect</a>
+</nav>
+</div>
+</header>
+
+<main>
+<section class="hero" id="home">
+<div class="container hero-inner">
+<div>
+<div class="kicker">Digital Skills • Online Learning • Growth</div>
+<h1>Learn Skills.<br>Build Your Future.</h1>
+<p>Digital Marketing, Affiliate Marketing आणि other practical online skills समजून घ्या आणि तुमची online journey एक strong foundation पासून सुरू करा.</p>
+<a class="btn" href="#contact">Start Your Journey</a>
+<a class="btn alt" href="#skills">Explore Skills</a>
+</div>
+<div class="hero-card">
+<div class="quote">“The right skill can change the direction of your journey.”</div>
+<small>— Skill With Tushar</small>
+</div>
+</div>
+</section>
+
+<section id="about">
+<div class="container">
+<div class="section-head"><div class="eyebrow">About</div><h2>Simple learning. Practical action.</h2><p>Skill development बद्दल clear आणि practical guidance.</p></div>
+<div class="about">
+<div class="panel"><h3>Hi, I'm Tushar.</h3><p>मी digital skills आणि affiliate marketing क्षेत्रात काम करतो. Beginners ना online skills समजून घेण्यासाठी आणि योग्य direction घेण्यासाठी practical information देण्यावर माझा focus आहे.</p></div>
+<div class="panel"><h3>Our Approach</h3><p><strong>Learn → Practice → Apply → Grow.</strong><br>Instant income promises पेक्षा skill development, consistency आणि action यावर focus.</p></div>
+</div>
+</div>
+</section>
+
+<section id="skills">
+<div class="container">
+<div class="section-head"><div class="eyebrow">Skills</div><h2>Choose a skill to explore</h2><p>तुमच्या interest नुसार एक area select करा.</p></div>
+<div class="cards">
+<div class="card"><div class="icon">01</div><h3>Digital Marketing</h3><p>Online marketing, content, promotion आणि digital growth basics.</p></div>
+<div class="card"><div class="icon">02</div><h3>Affiliate Marketing</h3><p>Affiliate model, product promotion आणि audience building concepts.</p></div>
+<div class="card"><div class="icon">03</div><h3>Graphic Design</h3><p>Social media creatives, branding आणि visual communication basics.</p></div>
+<div class="card"><div class="icon">04</div><h3>Video Editing</h3><p>Short-form videos, reels आणि content editing fundamentals.</p></div>
+<div class="card"><div class="icon">05</div><h3>Website Development</h3><p>Modern websites तयार करण्यासाठी practical fundamentals.</p></div>
+<div class="card"><div class="icon">06</div><h3>Social Media</h3><p>Content strategy, audience engagement आणि social presence.</p></div>
+</div>
+</div>
+</section>
+
+<section id="contact">
+<div class="container">
+<div class="section-head"><div class="eyebrow">Connect</div><h2>Start with a conversation.</h2><p>तुमची माहिती भरा. WhatsApp वर lead message तयार होईल.</p></div>
+<div class="form-wrap">
+<div class="form-info">
+<h3>Let's Connect</h3>
+<p>तुमच्या interest नुसार पुढील information मिळवण्यासाठी details submit करा.</p>
+<ul><li>✓ Name & Mobile</li><li>✓ Preferred Skill</li><li>✓ Direct WhatsApp connection</li><li>✓ No Google Sheet required</li></ul>
+</div>
+<form class="form" id="leadForm">
+<label for="name">Full Name</label>
+<input id="name" name="name" type="text" placeholder="Enter your name" required>
+<label for="phone">Mobile Number</label>
+<input id="phone" name="phone" type="tel" placeholder="Enter mobile number" pattern="[0-9]{10}" maxlength="10" required>
+<label for="skill">Interested Skill</label>
+<select id="skill" name="skill" required>
+<option value="">Select a skill</option>
+<option>Digital Marketing</option>
+<option>Affiliate Marketing</option>
+<option>Graphic Designing</option>
+<option>Video Editing</option>
+<option>Website Development</option>
+<option>Social Media Marketing</option>
+<option>Other</option>
+</select>
+<button class="btn" type="submit">Send Lead on WhatsApp →</button>
+<div class="note">By submitting, WhatsApp will open with your lead details ready to send.</div>
+</form>
+</div>
+</div>
+</section>
+
+<section class="cta">
+<div class="container"><div class="eyebrow">Your Next Step</div><h2>Skills first. Action next.</h2><p class="muted">Start learning, keep practicing and build consistently.</p></div>
+</section>
+</main>
+
+<footer>© 2026 Skill With Tushar • Learn Skills • Take Action • Grow</footer>
+
+<script>
+document.getElementById("leadForm").addEventListener("submit",function(e){
+e.preventDefault();
+const name=document.getElementById("name").value.trim();
+const phone=document.getElementById("phone").value.trim();
+const skill=document.getElementById("skill").value;
+if(!/^[0-9]{10}$/.test(phone)){alert("Please enter a valid 10-digit mobile number.");return;}
+const now=new Date();
+const date=now.toLocaleDateString("en-IN",{day:"2-digit",month:"2-digit",year:"numeric"});
+const time=now.toLocaleTimeString("en-IN",{hour:"2-digit",minute:"2-digit"});
+const message=`🔔 NEW LEAD - SKILL WITH TUSHAR
+
+👤 Name: ${name}
+📱 Mobile: ${phone}
+🎯 Interested Skill: ${skill}
+📅 Date: ${date}
+⏰ Time: ${time}
+🌐 Source: Website
+
+Please follow up with this lead.`;
+window.location.href="https://wa.me/919049076348?text="+encodeURIComponent(message);
+});
+</script>
+</body>
+</html>
