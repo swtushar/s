@@ -241,8 +241,24 @@ Please follow up with this lead.`;
     "https://wa.me/919049076348?" +
     "text=" + encodeURIComponent(message);
 
-  // Open WhatsApp
+  // GA4 Lead Tracking
+gtag("event", "generate_lead", {
+  lead_source: source,
+  interested_skill: skill,
+  medium: medium,
+  campaign: campaign,
+
+  event_callback: function() {
+    window.location.href = whatsappURL;
+  },
+
+  event_timeout: 1500
+});
+
+// Backup redirect to WhatsApp
+setTimeout(function() {
   window.location.href = whatsappURL;
+}, 1800);
 });
   </script>
 
