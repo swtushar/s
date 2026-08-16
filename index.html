@@ -260,18 +260,38 @@ setTimeout(function() {
   window.location.href = whatsappURL;
 }, 1800);
 });
-    // WhatsApp Click Tracking
-document.querySelectorAll('a[href*="wa.me"]').forEach(function(link) {
-  link.addEventListener('click', function() {
-    if (typeof gtag === 'function') {
-      gtag('event', 'whatsapp_click', {
-        event_category: 'engagement',
-        event_label: 'WhatsApp Button',
-        link_url: this.href
-      });
+document.addEventListener("click", function(e) {
+
+  const link = e.target.closest('a[href*="wa.me"]');
+
+  if (!link) return;
+
+  const whatsappURL = link.href;
+
+  if (typeof gtag === "function") {
+
+    e.preventDefault();
+
+    let opened = false;
+
+    function openWhatsApp() {
+      if (opened) return;
+      opened = true;
+      window.open(whatsappURL, "_blank");
     }
+
+    gtag("event", "whatsapp_click", {
+      event_category: "engagement",
+      event_label: "WhatsApp Button",
+      link_url: whatsappURL,
+      event_callback: openWhatsApp
+    });
+
+    setTimeout(openWhatsApp, 1500);
+
+  }
+
   });
-});
   </script>
 
 
